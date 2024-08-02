@@ -1,35 +1,36 @@
+import React from 'react';
+import * as S from './styles';
+import RegistrationCard from '../RegistrationCard';
+import { useRegistrations } from '../../../../contexts/RegistrationContext';
+import { listStatusMock } from '../../../../mocks/listStatus-mock';
 
-import * as S from "./styles";
-import RegistrationCard from "../RegistrationCard";
+const allColumns = listStatusMock;
 
-const allColumns = [
-  { status: 'REVIEW', title: "Pronto para revisar" },
-  { status: 'APPROVED', title: "Aprovado" },
-  { status: 'REPROVED', title: "Reprovado" },
-];
+const Columns: React.FC = () => {
+  const { registrations, updateRegistrationStatus, deleteRegistration } = useRegistrations();
 
-type Props = {
-  registrations?: any[];
-};
-const Collumns = (props: Props) => {
   return (
     <S.Container>
-      {allColumns.map((collum) => {
+      {allColumns.map((column) => {
+        const filteredRegistrations = registrations.filter(
+          (registration) => registration.status === column.status
+        );
+
         return (
-          <S.Column status={collum.status} key={collum.title}>
+          <S.Column status={column.status} key={column.title}>
             <>
-              <S.TitleColumn status={collum.status}>
-                {collum.title}
+              <S.TitleColumn status={column.status}>
+                {column.title}
               </S.TitleColumn>
               <S.CollumContent>
-                {props?.registrations?.map((registration) => {
-                  return (
-                    <RegistrationCard
-                      data={registration}
-                      key={registration.id}
-                    />
-                  );
-                })}
+                {filteredRegistrations.map((registration) => (
+                  <RegistrationCard
+                    data={registration}
+                    key={registration.id}
+                    onUpdateStatus={(registration, status) => updateRegistrationStatus({ ...registration, status })}
+                    onDelete={(id) => deleteRegistration(id)}
+                  />
+                ))}
               </S.CollumContent>
             </>
           </S.Column>
@@ -38,4 +39,5 @@ const Collumns = (props: Props) => {
     </S.Container>
   );
 };
-export default Collumns;
+
+export default Columns;

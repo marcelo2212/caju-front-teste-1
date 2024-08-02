@@ -4,7 +4,7 @@
       "admissionDate": "22/10/2023",
       "email": "luiz@caju.com.br",
       "employeeName": "Luiz Filho",
-      "status": "APPROVED",
+      "status": "REPROVED",
       "cpf": "56642105087",
       "id": "3"
     },
@@ -23,6 +23,22 @@
       "employeeName": "José Leão",
       "status": "REPROVED",
       "cpf": "99077524010"
+    },
+    {
+      "employeeName": "marcelo goncalves",
+      "email": "teste@gmail.com",
+      "cpf": "08070872462",
+      "admissionDate": "22/12/2023",
+      "status": "APPROVED",
+      "id": "_9fzEA_"
+    },
+    {
+      "employeeName": "jurema siqueira gonçalves",
+      "email": "jujuju@gmail.com",
+      "cpf": "77131161098",
+      "admissionDate": "01/02/2023",
+      "status": "APPROVED",
+      "id": "Jq0coSY"
     }
   ]
 }

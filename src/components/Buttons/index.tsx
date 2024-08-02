@@ -30,5 +30,33 @@ export const ButtonSmall = styled.button<{
   cursor: pointer;
 `;
 
+export const Buttons = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  text-align: center !important;
+
+  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    &:first-child {
+      background-color: #28a745;
+      color: #fff;
+      width: 100%;
+      display: block;
+    }
+
+    &:last-child {
+      background-color: #dc3545;
+      color: #fff;
+      width: 100%;
+      display: block;
+    }
+  }
+`;
+
 
 export default Button;

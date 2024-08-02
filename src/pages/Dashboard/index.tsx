@@ -6,7 +6,7 @@ const DashboardPage = () => {
   return (
     <S.Container>
       <SearchBar />
-      <Collumns registrations={[]} />
+      <Collumns />
     </S.Container>
   );
 };
