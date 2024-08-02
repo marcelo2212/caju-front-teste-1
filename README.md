@@ -1,4 +1,3 @@
-
 # Caju Front End Teste
 
 Esse é um teste para você demonstrar suas experiencia como front end, a aplicação basicamente se divide em duas telas, o `Dashboard` e um `Formulário`.
@@ -119,3 +118,157 @@ Json Web Server http://localhost:3000/
 ``
 Para concluir o desenvolvimento, clone o repositório, faça as edições necessárias e depois envie a URL do novo repositório com suas alterações para o RH.
 ``
+
+
+# Project README
+
+Welcome to our React Project! This README will guide you through the structure and organization of our project, ensuring you understand how everything fits together seamlessly. Our architecture is designed with simplicity and scalability in mind, enabling you to quickly grasp the project and contribute effectively.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Project Structure](#project-structure)
+3. [Components](#components)
+4. [Contexts](#contexts)
+5. [Hooks](#hooks)
+6. [Mocks](#mocks)
+7. [Pages](#pages)
+8. [Router](#router)
+9. [Services](#services)
+10. [Types](#types)
+11. [Utils](#utils)
+12. [Getting Started](#getting-started)
+13. [Conclusion](#conclusion)
+
+## Introduction
+
+Our React project is built with a clear and intuitive architecture, ensuring ease of use and rapid development. With a focus on modularity and reusability, our structure allows for effortless scalability and maintenance.
+
+## Project Structure
+
+Here's an overview of our project structure:
+
+```
+src/
+  components/
+  contexts/
+  hooks/
+  mocks/
+  pages/
+  router/
+  services/
+  types/
+  utils/
+  App.tsx
+  index.css
+  main.tsx
+  vite-env.d.ts
+```
+
+### Components
+
+Our `components` directory houses reusable UI elements, ensuring consistency across the application.
+
+- **Buttons/**: Contains button components.
+  - `IconButton.tsx`
+  - `index.test.tsx`
+  - `index.tsx`
+- **ConfirmationModal/**: Modal components for user confirmations.
+  - `index.tsx`
+  - `styles.ts`
+- **CustomToast/**: Custom toast notifications.
+  - `index.tsx`
+- **Header/**: Application header.
+  - `index.tsx`
+- **Loading/**: Loading indicators.
+  - `index.css`
+  - `index.tsx`
+- **TextField/**: Custom text fields.
+  - `index.tsx`
+
+### Contexts
+
+The `contexts` directory contains context providers for managing global state.
+
+- **RegistrationContext.tsx**: Manages registration-related state.
+
+### Hooks
+
+Custom hooks to encapsulate and reuse logic.
+
+- **useLoading.ts**: Manages loading state.
+
+### Mocks
+
+Mock data for testing and development.
+
+- **listStatus-mock.ts**
+- **newUser-mock.ts**
+
+### Pages
+
+The `pages` directory contains the main views of our application.
+
+- **Dashboard/**: Main dashboard view.
+  - **components/**: Dashboard-specific components.
+    - **Columns/**: Columns for displaying data.
+      - `index.tsx`
+      - `styles.tsx`
+    - **RegistrationCard/**: Cards for displaying registration details.
+      - `index.tsx`
+      - `styles.tsx`
+    - **Searchbar/**: Search bar component.
+      - `index.tsx`
+      - `styles.tsx`
+  - `index.tsx`
+  - `styles.tsx`
+- **NewUser/**: New user registration view.
+  - `index.tsx`
+  - `styles.ts`
+
+### Router
+
+Routing configuration for the application.
+
+- **index.tsx**
+- **routes.ts**
+
+### Services
+
+Service files for API interactions.
+
+- **axiosConfig.ts**: Axios configuration.
+- **registrationService.ts**: Registration-related API calls.
+
+### Types
+
+Type definitions for TypeScript.
+
+- **Registration.ts**
+- **StatusEnum.ts**
+- **TypeMessageToastEnum.ts**
+
+### Utils
+
+Utility functions for common tasks.
+
+- **admissionDateUtils.ts**
+- **cpfUtils.ts**
+- **emailUtils.ts**
+- **employeeNameUtils.ts**
+
+## Getting Started
+
+Follow these steps to get started with the project:
+
+1. **Clone the repository**: `git clone https://github.com/your-repo/react-project.git`
+2. **Install dependencies**: `yarn install`
+3. **Run the development server**: `yarn dev`
+4. **Build the project**: `yarn build`
+5. **Run tests**: `yarn test`
+
+## Conclusion
+
+Our React project is designed to be intuitive, modular, and scalable. By following this architecture, you can quickly understand the structure and start contributing effectively. Enjoy coding and building amazing features!
+
+Feel free to reach out if you have any questions or need further assistance. Happy coding! 🚀
