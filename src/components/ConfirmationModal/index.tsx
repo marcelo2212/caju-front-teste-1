@@ -1,7 +1,6 @@
-import React from 'react';
-import * as S from './styles';
-import Button, { Buttons } from '../Buttons';
-
+import React from "react";
+import * as S from "./styles";
+import Button, { Buttons } from "../Buttons";
 
 type Props = {
   isOpen: boolean;
@@ -10,7 +9,12 @@ type Props = {
   message: string;
 };
 
-const ConfirmationModal: React.FC<Props> = ({ isOpen, onClose, onConfirm, message }) => {
+const ConfirmationModal: React.FC<Props> = ({
+  isOpen,
+  onClose,
+  onConfirm,
+  message,
+}) => {
   if (!isOpen) return null;
 
   return (

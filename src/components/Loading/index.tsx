@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 
 interface LoadingModalProps {
   isLoading: boolean;
@@ -10,7 +9,7 @@ const LoadingModal: React.FC<LoadingModalProps> = ({ isLoading }) => {
 
   return (
     <div className="loading-modal">
-      <div className="spinner"></div>
+      <div className="spinner" data-testid="spinner"></div>
     </div>
   );
 };

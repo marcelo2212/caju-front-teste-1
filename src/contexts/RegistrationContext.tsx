@@ -1,3 +1,4 @@
+export { RegistrationContext };
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { getRegistrations, updateRegistration, getRegistrationsByCpf, createRegistration, removeRegistration } from '../services/registrationService';
 import { Registration } from '../types/Registration';

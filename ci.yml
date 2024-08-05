@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v2
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Instalar dependências
+        run: yarn install
+
+      - name: Inicializar o banco de dados
+        run: yarn init:db
+
+      - name: Iniciar servidor de desenvolvimento
+        run: yarn dev &
+        env:
+          NODE_ENV: test
+
+      - name: Aguardar servidor iniciar
+        run: npx wait-on http://localhost:3001
+
+      - name: Executar testes Cypress
+        run: yarn cy:run

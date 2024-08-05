@@ -10,5 +10,10 @@ export default {
   moduleNameMapper: {
     "^~/(.+)": "<rootDir>/src/$1",
   },
-//   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  transformIgnorePatterns: [
+    '/node_modules/(?!react-toastify)',
+  ],
+  moduleNameMapper: {
+    '\\.css$': 'identity-obj-proxy'
+  }
 };
